@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Altis Paradise</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../views/style/main.css" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="../views/js/display.js"></script>
+		<link rel="icon" type="image/png" href="../views/img/logoBlack.png" />
+		<link rel="author license" href="LICENSE.txt">
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-default">
+			<div class="container">
+
+				<div class="navbar-header">
+					<button class="navbar-toggle collapsed" data-target="#navbar-collapse-1" data-toggle="collapse"
+					type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><img alt='logo' id='logoNav' src="../views/img/logo.png" width="40" height='40' /><a class="navbar-brand" href="/"> Altis Paradise</a>
+				</div>
+
+				<div class="collapse navbar-collapse navbar-right" id="navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li id='presentationNav'>
+							<a href="#presentation" class="scrollTo">Presentation</a>
+						</li>
+
+						<li class="dropdown" id='serverNav'>
+						   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Serveurs<span class="caret"></span></a>
+						   <ul class="dropdown-menu" role="menu">
+						     <li><a href="#slider" class='scrollTo'>Nos serveurs</a></li>
+						     <li class="divider"></li>
+						     <li><a href="#altis" class='scrollTo'>Altis Life</a></li>
+						     <li><a href="#rust" class='scrollTo'>Rust</a></li>
+						     <li><a href="#ark" class='scrollTo'>Ark</a></li>
+						   </ul>
+						 </li>
+
+						<li>
+							<a href="http://forum.altisparadise.fr">Forum</a>
+						</li>
+
+						<li>
+							<a href="ts3server://ts.altisparadise.fr">Teamspeak</a>
+						</li>
+
+						<li>
+							<a href="http://donate.altisparadise.fr">Donation</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div id="bg"></div>
+		<div id="overlay"></div>
+		<div id="filter"></div>
+		<section class="firstPage">
+			<img alt='logo' src="../views/img/logo.png" width="200" height='200' />
+			<h2>Altis Paradise</h2>
+			<h3>Communauté Francophone</h3>
+			<a href='#presentation' class='scrollTo'><span class="glyphicon glyphicon-chevron-down" id='chevron'></span></a>
+		</section>
+		
+		<div id='containerInfo'>
+			<section id='presentation'>
+				<h4>Presentation</h4>
+				<hr/>
+				<div id='descPresentationContainer'>
+					<p>Bienvenue sur la plateforme communautaire d'Altis Paradise.
+					Cette plateforme a été fondée suite à la création du serveur Altis Paradise</p>
+
+					<p>Rejoignez-la communauté sur nos autres serveurs
+					Discutez instantanément avec vos amis ou faites des rencontres sur le teamspeak !
+					Ce dernier dispose d’une multitude de channels dédiés aux différents jeux. Que vous soyez seul ou en équipe, Altis Paradise vous accueille.</p>
+				</div>
+				<div id='presentationContainer'>
+					<div class='line'>
+						<div class='box'>
+							<h5>Un Forum</h5>
+							<img src='../views/img/forum.png' width='100' height='100' alt='icon'/>
+							<div class='desc'>Des idées ? Des  anecdotes ? Besoin d'aide pour démarrer ? Venez échanger avec la commnauté !</div>
+						</div>
+
+						<div class='box'>
+							<h5>Une communauté</h5>
+							<img src='../views/img/teamspeak.png' width='100' height='100' alt='icon'/>
+							<div class='desc'>Discutez instantanément avec vos amis ou faites des rencontres sur le teamspeak !</div>
+						</div>
+					</div>
+					<div class='line'>
+						<div class='box'>
+							<h5>Un serveur puissant</h5>
+							<img src='../views/img/server.png' width='100' height='100' alt='icon'/>
+							<div class='desc'>Sur nos serveurs vous disposerez d'une fluidité à toute épreuve !</div>
+						</div>
+
+						<div class='box'>
+							<h5>Un staff présent</h5>
+							<img src='../views/img/staff.png' width='100' height='100' alt='icon'/>
+							<div class='desc'>Une équipe d'administrateurs et modérateurs est présente pour répondre à vos questions !</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<span class='glyphicon glyphicon-chevron-left slideChevron slideChevronLeft'></span>
+			<span class='glyphicon glyphicon-chevron-right slideChevron slideChevronRight'></span>
+			<section id='slider'>
+				<h5>Les serveurs</h5>
+				<hr />
+				<div id='sliderContainer'>
+
+					<div class='slide'>
+						<div class='slideContainer'>
+							<div class='imgContainer'>
+								<div class='img img1' style="background-image: url('../views/img/slideraltis1.jpg')"></div>
+								<div class='img img2' style="background-image: url('../views/img/slideraltis2.jpg')"></div>
+							</div>
+							<div class='descContainer'>
+								<h6>Altis Life</h6>
+								<hr />
+								<div class='desc'>
+									<p>Altis Life est un mod de jeu d’Arma 3, développé par Tonic où vous incarnez un personnage de manière RolePlay.</p>
+									<p>Vous pourrez choisir différents métiers et différentes factions, où vous ferez des rencontres, lierez des liens et combattrez ensemble !</p>
+									<a href='#altis' class='scrollTo'><div class='buttonSlide'>Plus d'informations</div></a>
+								</div>
+							</div>
+						</div>
+					</div><div class='slide'>
+						<div class='slideContainer'>
+							<div class='imgContainer'>
+								<div class='img img1' style="background-image: url('../views/img/sliderrust1.jpg')"></div>
+								<div class='img img2' style="background-image: url('../views/img/sliderrust2.png')"></div>
+							</div>
+							<div class='descContainer'>
+								<h6>Rust</h6>
+								<hr />
+								<div class='desc'>
+									<p>Rust est LE jeu de survie par excellence, avec des possibilités infinies de craft, un monde ouvert où vous pourrez monter vos propres bases, où vous vous sentirez à l'abri. Si toutefois vous n’avez pas d’ennemis !</p>
+									<p>Montez des alliances avec des amis, partez à la conquête du territoire, et imposez votre domination. Ou simplement, faite cavalier seul, soyez furtif et attaquez vos ennemis dans le dos !</p>
+									<a href='#rust' class='scrollTo'><div class='buttonSlide'>Plus d'informations</div></a>
+								</div>
+							</div>
+						</div>
+					</div><div class='slide'>
+						<div class='slideContainer'>
+							<div class='imgContainer'>
+								<div class='img img1' style="background-image: url('../views/img/sliderark1.jpg')"></div>
+								<div class='img img2' style="background-image: url('../views/img/sliderark2.jpg')"></div>
+							</div>
+							<div class='descContainer'>
+								<h6>ARK</h6>
+								<hr />
+								<div class='desc'>
+									<p>Ark: Surival Evolved est, comme son nom l’indique, un jeu axé sur la survie, en milieu hostile.</p>
+									<p>Pour vous défendre contre une armée de dinosaures, vous pouvez crafter de nombreux items, capturer votre propre armée de dinosaures, qui répondront au doigt et à l’oeil, et voyager sur une île immense, qui recèle bien des secrets.</p>
+									<a href='#ark' class='scrollTo'><div class='buttonSlide'>Plus d'informations</div></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id='server'>
+				<div class='server' id='altis'>
+					<h6>Altis Life</h6>
+					<hr/>
+					<div class='serverContainer'>
+						<span class='h7'>Nous Rejoindre</span>
+						<hr/>
+						<p>Sur votre menu arma, aller dans multijoueurs, attendez que la liste des serveur apparaisse, puis cliquez sur “Distant” en bas à droite.</p>
+						<p>Ensuite entrez l’adresse suivante: <span class='bold'>srv1.altisparadise.fr</span> avec le port <span class='bold'>2302</span> (standard).</p>
+						<p>Vous avez dorénavant les clefs pour accéder au serveur :).</p> <br />
+						<a href="http://www.gametracker.com/server_info/5.135.139.172:2302/" target="_blank"><img src="http://cache.www.gametracker.com/server_info/5.135.139.172:2302/b_560_95_1.png" width="560" height="95" alt=""/></a>
+					</div>
+						<div class='serverImgContainer'>
+							<div class='img' style="background-image: url('../views/img/imgaltis1.jpg')"></div><div class='img' style="background-image: url('../views/img/imgaltis2.jpg')"></div><div class='img' style="background-image: url('../views/img/imgaltis3.jpg')"></div><div class='img' style="background-image: url('../views/img/imgaltis4.jpg')"></div>
+						</div>
+				</div>				
+				<div class='server' id='rust'>
+					<h6>Rust</h6>
+					<hr/>
+					<div class='serverContainer'>
+						<span class='h7'>Nous Rejoindre</span>
+						<hr/>
+						<p>Recherchez: <span class='bold'>[FR] ParadiseLand</span> dans la barre de recherche des serveur communautaires. Rien de plus simple !</p> <br />
+						<a href="http://www.gametracker.com/server_info/5.135.139.172:28015/" target="_blank"><img src="http://cache.www.gametracker.com/server_info/5.135.139.172:28015/b_560_95_1.png" width="560" height="95" alt=""/></a>
+					</div>
+						<div class='serverImgContainer'>
+							<div class='img' style="background-image: url('../views/img/imgrust1.png')"></div><div class='img' style="background-image: url('../views/img/imgrust2.jpg')"></div><div class='img' style="background-image: url('../views/img/imgrust3.jpg')"></div><div class='img' style="background-image: url('../views/img/imgrust4.jpg')"></div>
+						</div>
+				</div>				
+				<div class='server' id='ark'>
+					<h6>Ark : Survival Evolved</h6>
+					<hr/>
+					<div class='serverContainer'>
+						<span class='h7'>Nous Rejoindre</span>
+						<hr/>
+						<p>Allez dans l’interface des serveurs et faites une recherche en y inscrivant le nom suivant: <span class='bold'>[Fr] AltisParadise.fr</span> </p>
+						À très vite !<br />
+					</div>
+						<div class='serverImgContainer'>
+							<div class='img' style="background-image: url('../views/img/imgark1.jpg')"></div><div class='img' style="background-image: url('../views/img/imgark2.jpg')"></div><div class='img' style="background-image: url('../views/img/imgark3.jpg')"></div><div class='img' style="background-image: url('../views/img/imgark4.jpg')"></div>
+						</div>
+				</div>	
+			</section>
+		<footer>
+			<hr/>
+			© 2015 - altisparadise.fr<br/>
+			Proudly Designed by <a href='https://twitter.com/Mr_Freezeex'>Mr_Freezeex</a>
+			<hr/>
+		</footer>
+		</div>
+	</body>
+</html>

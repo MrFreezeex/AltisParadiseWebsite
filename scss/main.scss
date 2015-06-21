@@ -1,0 +1,462 @@
+/*
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE.txt', which is part of the repository.
+ * Copyright (C) 2015 by OUTHENIN-CHALANDRE Arthur. All right reserved.
+ */
+/* INIT */
+
+@import "compass";
+@import 'variables';
+@import 'navbar';
+
+@include font-face(	"roboto", 
+					font-files("Roboto-Regular-webfont.woff",
+								"Roboto-Regular-webfont.ttf",
+								"Roboto-Regular-webfont.svg"), 
+								$eot: "Roboto-Regular-webfont.eot");
+@include keyframes(pointerGrow) {
+	from {
+		font-size: 40px;
+		@include opacity(0.8);
+	} to {
+		@include opacity(1);
+		font-size: 60px;
+	}
+}
+@include keyframes(pointerMove) {
+	0% {} 50% {top:10px;} 100% {top:0px;}
+}
+@include keyframes(opacityImg) {
+	from {@include opacity(0.8)} to {@include opacity(1)}
+}
+@include keyframes(opacityImgOut) {
+	from {@include opacity(1)} to {@include opacity(0.8)}
+}
+@include keyframes(borderBox) {
+	from {border-color: #fff} to {border-color: $principalColor}
+}
+@include keyframes(borderBoxOut) {
+	from {border-color: $principalColor} to {border-color: #fff}
+}
+.logo {
+	background-image: url('../img/logo.png');
+}
+body {
+	#bg {
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		z-index: -50;
+		width: 100%;
+		height: 100%;
+		background-image: url('../img/bg.png');
+		@include background-size(cover);
+		background-repeat: no-repeat;
+	}
+	#overlay {
+		background: transparent url('../img/overlay.png');
+		z-index: -10;
+		position: fixed;
+		top:0px;
+		left:0px;
+		width: 100%;
+		height: 100%;
+	}
+	#filter {
+		@include opacity(0.4);
+		background-color: #000;
+		position: fixed;
+	  	top: 0; left: 0; bottom: 0; right: 0;
+		z-index: -50;
+		width: 100%;
+		height: 100%;
+	}
+	.firstPage {
+		height: 491px;
+		width: 100%;
+		color: white;
+		text-align: center;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 0; right: 0;
+		z-index: 50;
+		a {
+			font-size: 40px;
+			@include opacity(0.8);
+			position: relative;
+			color: #fff;
+			&:hover {
+				@include animation(pointerGrow 0.4s ease);
+				@include opacity(1);
+				font-size: 60px;
+				color: #fff;
+			}
+			&:focus, &:link {
+				color: #fff;
+			}
+			#chevron {
+				&:hover {
+					@include animation(pointerMove 1s ease 0.3s infinite);
+				}	
+			}
+			
+		}
+
+		h2 {
+			margin: 0;
+			padding: 0;
+			font-size: 60px;
+		}
+		h3 {
+			font-size: 20px;
+			margin: 0;
+			line-height: 25px;
+			margin-bottom: 10px;
+		}
+
+	}
+	#containerInfo {
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		overflow: hidden;
+
+		.slideChevron {
+			font-size: 40px;
+			color: #fff;
+			border: 3px #fff solid;
+			@include border-radius(40px);
+			padding: 5px;
+			position: absolute;
+			z-index: 10;
+			&:hover {
+				border: 3px $principalColor solid;
+				color: $principalColor;
+				cursor: pointer;
+			}
+		}
+		
+		.slideChevronLeft {
+			left: 3%;
+			&:hover {
+				border: 3px $principalColor solid;
+				color: $principalColor;
+				cursor: pointer;
+			}
+		}				
+		.slideChevronRight {
+			right: 3%;
+		}
+		#presentation {
+			min-height: 500px;
+			width: 100%;
+			background-color: #f3f3f3;
+			border-style: solid;
+			border-color: $principalColor;
+			border-width: 15px 0px;
+			@include box-shadow(#656565 0px 10px 10px -10px inset, #656565 0px -10px 10px -10px inset);
+			h4 {
+				text-transform: uppercase;
+				text-align: center;
+				font-size: 35px;
+				font-family: roboto;
+			}
+			hr {
+				border: 0;
+				height: 0;
+				border-top: 1px solid rgba(0, 0, 0, 0.1);
+				border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+			}
+			#descPresentationContainer {
+				width: 50%;
+				margin: 0 auto;
+				font-size: 18px;
+			}
+			#presentationContainer {
+				
+				margin: 50px 0;
+				.line {
+					width: 49%;
+					@include inline-block();
+					&:nth-child(1) {
+						text-align: right;
+					}
+					&:nth-child(2) {
+						.box{
+							&:last-child {
+								margin: 0;
+							}
+						}
+					}
+					.box {
+						text-align: center;
+						@include inline-block();
+						width: 250px;
+						height: 300px;
+						padding: 20px;
+						padding-top: 15px;
+						margin-right: 50px;
+						background-color: #fff;
+						border-top: 5px solid #fff;
+						@include animation(borderBoxOut 1s ease);
+					
+						&:hover {
+							border-color: $principalColor;
+							@include animation(borderBox 1s ease);
+						}
+						h5 {
+							font-family: "Times New Roman";
+							font-size: 18px;
+						}
+						img {
+							margin-bottom: 30px;
+							margin-top: 10px;
+						}
+						.desc {
+							margin: 0 auto;
+						}
+					}
+				}
+			}
+		}
+		#slider {
+			min-height: 550px;
+			width: 100%;
+			background-color: $sliderColor;
+			padding-top: 10px;
+			margin-bottom: 500px;
+			h5 {
+				font-size: 35px;
+				color: #f3f3f3;
+				margin-top: 0;
+				text-align: center;
+				text-transform: uppercase;
+				font-family: roboto;
+			}
+			hr {
+				border: 0;
+				height: 1px;
+				background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+			}
+			#sliderContainer {
+				width: 300%;
+				height: 75%;
+				margin: 0 auto;
+				position: relative;
+
+				.slide {
+					width: 33%;
+					height: 100%;
+					@include inline-block;
+
+					.slideContainer {
+						height: 100%;
+						width: 75%;
+						margin: 0 auto;
+						margin-top: 10px;
+						padding-bottom: 50px;
+						.imgContainer {
+							width: 50%;
+							height: 100%;
+							margin-top: 50px;
+							@include inline-block();
+
+							.img {
+								border: 2px #fff solid;
+								width: 60%;
+								height: 200px;
+								position: relative;
+								@include background-size(cover);
+								z-index: 2;
+							}
+							.img2 {
+								bottom: 40px;
+								left: 35%;
+								z-index: 0;
+							}
+						}
+						.descContainer {
+							width: 49%;
+							height: 100%;
+							display: inline-block;
+							h6 {
+								font-size: 30px;
+								color: white;
+								text-align: center;
+							}
+							hr {
+								margin-top: 0;
+								height: 2px;
+								width: 25%;
+								background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+
+							}
+							.desc {
+								font-size: 15px;
+								line-height: 22px;
+								color: #fff;
+								width: 70%;
+								@include inline-block();
+								margin: 1% 15%;
+								text-align: justify;
+								a {
+									text-decoration: none;
+								}
+								.buttonSlide {
+									margin-top: 20px;
+									padding: 4px;
+									color: #fff;
+									border: 4px solid #f3f3f3;
+									height: 58px;
+									font-size: 15px;
+									line-height: 42px;
+									width: 160px;
+									text-align: center;
+									@include border-radius(10px);
+									font-weight: bold;
+										text-decoration: initial;
+										text-decoration-color: initial;										
+									&:hover {
+										background-color: #f3f3f3;
+										color: #000;
+									}
+								}
+							}
+
+						}
+					}
+				}
+			}
+		}
+		#server {
+			margin-bottom: 410px;
+			.server {
+				padding: 10px 0 30px 0;
+				background-color: #f3f3f3;
+				border-style: solid;
+				border-color: $principalColor;
+				border-width: 25px 0px 0px 0px;
+				background-color: #f3f3f3;
+				@include box-shadow(#656565 0px 10px 10px -10px inset, #656565 0px -10px 10px -10px inset);
+				min-height: 400px;
+				overflow: auto;
+				h6 {
+					text-transform: uppercase;
+					text-align: center;
+					font-size: 35px;
+					font-family: roboto;
+				}
+				hr {
+					border: 0;
+					height: 0;
+					border-top: 1px solid rgba(0, 0, 0, 0.1);
+					border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+				}
+				.serverContainer {
+					width: 50%;
+					margin: 0 auto;
+					font-size: 17px;
+					.h7 {
+						font-size: 25px;
+						margin: 10px 0;
+						display: block;
+					}
+					hr {
+						width: 100px;
+						margin: 10px 0;
+						background-color: #333;
+						@include border-radius(1px);
+					}
+				}
+			}
+			.serverImgContainer {
+				width: 100%;
+				.img {
+					text-align: center;
+					@include inline-block();
+					width: 20%;
+					margin-top: 20px;
+					margin-right: 2%;
+					height: 200px;
+					@include border-radius(4px);
+					border: 3px $principalColor solid;
+					@include opacity(0.8);
+					border: 3px $imgColor solid;
+					@include background-size(cover);
+					@include animation(opacityImgOut 1s ease);
+					&:hover {
+						border: 3px $imgColorHover solid;
+						@include opacity(1);
+						@include animation(opacityImg 1s ease);
+					}
+					&:first-child {
+						margin-left: 7%;
+					}
+				}
+			}
+		}
+		footer {
+			padding: 5px;
+			background-color: $sliderColor;
+			color: #fff;
+			text-align: center;
+			hr {
+				border: 0;
+				height: 1px;
+				background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.33), rgba(255, 255, 255, 0));
+			}
+			a {
+				color: white;
+				&:hover, &:focus {
+					color: $principalColor;
+				}
+			}
+		}
+	}
+	#main {
+		margin-bottom: 5000px;
+	}
+}
+/* 
+GENERAL
+ */
+.bold {
+	font-weight: bold;
+}
+
+ /* 
+ MEDIA QUERRIES
+  */
+@media (max-width:1200px) {
+	.serverImgContainer {
+		.img {
+			width: 40% !important;
+			margin-right: 5% !important;
+			height: 200px;
+			&:nth-child(odd) {
+				margin-left: 10% !important;
+			}
+		}
+	}
+}
+@media (max-width:1250px) {
+	#presentation {
+		#presentationContainer {
+			.line {
+				width: 100% !important;
+				text-align: center !important;
+				&:nth-child(1) {
+					margin-bottom: 30px;
+					.box {
+						&:last-child {
+							margin: 0 !important;
+						}
+					}
+				}
+				.box {
+
+				}
+			}
+		}
+	}
+}

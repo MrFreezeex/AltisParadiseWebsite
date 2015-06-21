@@ -1,0 +1,105 @@
+#logoNav {
+	position: relative;
+	right: 200px;
+}
+.navbar-default {
+	font-family: roboto;
+	text-transform: uppercase;
+	font-size: 25px;
+	@include opacity(0.7);
+	width: 100%;
+	padding: 14px 0;
+	z-index: 200;
+	.dropdown-menu {
+		background-color:$bgDefault;
+		color: #fff; 
+		top: 63px;
+		left: 0;
+		li {
+			a {
+				color: #fff;
+				&:hover, &:focus {
+					color: #333;
+				}
+			}
+		}
+	}
+	background-color: $bgDefault;
+	border-color: $bgHighlight;
+	@include border-radius(0);
+	.navbar-brand {
+		color: $colDefault;
+		&:hover, &:focus { 
+			color: #fff; }}
+	.navbar-text {
+		color: $colDefault; }
+	.navbar-nav {
+		> li {
+			> a {
+				color: $colDefault;
+				&:hover {
+					background-color: $bgHighlight;
+					color: $colHighlight;
+				}  &:focus {
+					color: $colHighlight; }}}
+		> .active {
+			> a, > a:hover, > a:focus {
+				color: $colHighlight;
+				background-color: $bgHighlight; }}
+		> .open {
+			> a, > a:hover, > a:focus {
+				color: $colHighlight;
+				background-color: $bgHighlight; }}}
+	.navbar-toggle {
+		border-color: $bgHighlight;
+		&:hover, &:focus {
+			background-color: $bgHighlight; }
+		.icon-bar {
+			background-color: $colDefault; }}
+	.navbar-collapse,
+	.navbar-form {
+		border-color: $colDefault; }
+	.navbar-link {
+		color: $colDefault;
+		&:hover {
+			color: $colHighlight; }}}
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu {
+		> li > a {
+			color: $colDefault;
+			&:hover, &:focus {
+				color: $colHighlight; }}
+		> .active {
+			> a, > a:hover, > a:focus, {
+				color: $colHighlight;
+				background-color: $bgHighlight; }}}
+}
+.navbar-fixed {
+	position: fixed;
+	top: 0;
+}
+.navbar-scroll {
+	padding: 0;
+	@include opacity(0.9);
+	.dropdown-menu {
+		top: 50px;
+	}
+}
+@media (max-width: 1300px) {
+	.navbar-default {
+		font-size: 20px;
+	}
+}
+@media (max-width: 1000px) {
+	.navbar-right {
+		padding: 0 !important;
+	}
+	li {
+		a {
+			padding: 10px !important;
+			font-size: 15px;
+			margin-top: 5px;
+		}
+	}
+
+}

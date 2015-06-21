@@ -1,0 +1,32 @@
+/*
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE.txt', which is part of the repository.
+ * Copyright (C) 2015 by OUTHENIN-CHALANDRE Arthur. All right reserved.
+ */
+/* 
+* nav
+ */
+
+$baseColor		: #272727;
+$bgDefault      : scale-lightness($baseColor, -5%);
+$bgHighlight    : scale-lightness($baseColor, -50%);
+$colDefault     : #ecf0f1;
+$colHighlight   : #F5AB35;
+$logoColor		: scale-lightness($baseColor, -35%);
+
+$bgDefault2		: #fff;		
+
+/* 
+* first page
+ */
+
+/* 
+general
+ */
+$principalColor	: #f59700;
+$BgColor		: #353535;
+$sliderColor	: scale-lightness($BgColor, -10%);
+
+
+$imgColor		: scale-lightness($principalColor, -5%);
+$imgColorHover	: scale-lightness($principalColor, -10%);
